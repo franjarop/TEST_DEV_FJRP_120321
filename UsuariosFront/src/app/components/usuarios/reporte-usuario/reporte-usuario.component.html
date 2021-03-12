@@ -2,7 +2,7 @@
   <hr>
   <h1 class="display-4 text-center">Reporte usuario </h1>
   <hr>
-  <table class="table table-striped">
+  <table id='excel-table' class="table table-striped">
     <tbody>
       <tr *ngFor = "let usuarioReporte of reportService.list | paginate: {itemsPerPage: 3, currentPage: pageActual}">
         <td>{{ usuarioReporte.idPersonaFisica }}</td>
@@ -23,7 +23,7 @@
         </a>
       </td>
       <td>
-        <button type="button" class="btn btn-success">Exportar excel</button>
+        <button type="button" class="btn btn-success" (click)="exportexcel()" >Exportar excel</button>
       </td>
     </tr>
   </table>
