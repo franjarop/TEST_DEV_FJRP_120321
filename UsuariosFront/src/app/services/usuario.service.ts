@@ -26,8 +26,6 @@ export class UsuarioService {
                   .then(data => {
                     this.list = data as Usuario[]
                   });
-
-
   }
 
   eliminarUsuario(id:number):Observable<Usuario>{

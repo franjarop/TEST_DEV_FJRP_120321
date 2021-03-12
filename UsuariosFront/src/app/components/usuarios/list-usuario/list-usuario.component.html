@@ -12,12 +12,17 @@
         <i class="far fa-edit fa-lg text-info" (click)="editar(usuario)" style="cursor: pointer;"></i>
       </td>
       <td>
-        <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarTarjeta(1)" style="cursor: pointer;"></i>
+        <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarUsuario(1)" style="cursor: pointer;"></i>
       </td>
-
     </tr>
   </tbody>
 </table>
+<nav>
+  <a routerLink="/reporte-usuario">
+    <button style="width: 100%; color: white; " class="btn btn btn-info btn-lg btn-block"  type="menu"> <i class="far fa-file-alt"></i >Obtener reporte</button>
+  </a>
+</nav>
+
 
 
 

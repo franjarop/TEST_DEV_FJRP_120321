@@ -1,0 +1,33 @@
+<div class="jumbtron">
+  <hr>
+  <h1 class="display-4 text-center">Reporte usuario </h1>
+  <hr>
+  <table class="table table-striped">
+    <tbody>
+      <tr *ngFor = "let usuarioReporte of reportService.list | paginate: {itemsPerPage: 3, currentPage: pageActual}">
+        <td>{{ usuarioReporte.idPersonaFisica }}</td>
+        <td>{{ usuarioReporte.nombre }}</td>
+        <td>{{ usuarioReporte.apellidoPaterno }}</td>
+        <td>{{ usuarioReporte.apellidoMaterno }}</td>
+        <td>{{ usuarioReporte.rfc }}</td>
+        <td>{{ usuarioReporte.fechaNacimiento }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+  <table>
+    <tr>
+      <td>
+        <a routerLink="/usuario">
+          <button type="button" class="btn btn-secondary">Volver</button>
+        </a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-success">Exportar excel</button>
+      </td>
+    </tr>
+  </table>
+  <nav>
+
+  </nav>
+</div>

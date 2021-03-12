@@ -16,14 +16,12 @@ export class ListUsuarioComponent implements OnInit {
     this.usuarioServicio.obtenerUsuarios();
   }
 
-  eliminarTarjeta(id:number){
+  eliminarUsuario(id:number){
     if(confirm("Estas seguro que desea eliminar el registro")){
-      /*
       this.usuarioServicio.eliminarUsuario(id).subscribe(data => {
 
         this.usuarioServicio.obtenerUsuarios();
       })
-      */
       this.toastr.warning("Registro Eliminado", "El usuario fue eliminado");
     }
   }

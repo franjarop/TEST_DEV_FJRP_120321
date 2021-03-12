@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import {NgxPaginationModule} from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { UsuarioComponent } from './components/usuarios/usuario/usuario.componen
 import { ListUsuarioComponent } from './components/usuarios/list-usuario/list-usuario.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { ReporteUsuarioComponent } from './components/usuarios/reporte-usuario/reporte-usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { LoginComponent } from './components/login/login.component';
     UsuarioComponent,
     ListUsuarioComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ReporteUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { LoginComponent } from './components/login/login.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
