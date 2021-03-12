@@ -28,7 +28,6 @@ export class UsuarioComponent implements OnInit, OnDestroy {
       ApellidoPaterno:['',[Validators.required, Validators.maxLength(50)]],
       ApellidoMaterno:['',[Validators.required, Validators.maxLength(50)]],
       RFC:['',[Validators.required, Validators.maxLength(13), Validators.minLength(13)]],
-
     })
   }
 
@@ -57,9 +56,6 @@ export class UsuarioComponent implements OnInit, OnDestroy {
     }else{
       this.editar();
     }
-
-
-
   }
 
   agregar(){

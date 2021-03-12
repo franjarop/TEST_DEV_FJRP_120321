@@ -10,10 +10,7 @@ export class UsuarioService {
 
   myAppUrl = 'https://localhost:44365/';
   myApiUrl = 'api/Usuarios/'
-  list: Usuario[] = [
-    {Nombre:"Javier", ApellidoPaterno:"Robles", ApellidoMaterno:"Perez", RFC:"ROPF900217"},
-    {Nombre:"Jonathan", ApellidoPaterno:"Rodriguez", ApellidoMaterno:"Perez", RFC:"ROPF901234"}
-  ]
+  list?: Usuario[];
 
   private actualizarFormulario = new BehaviorSubject<Usuario>({} as any);
 
@@ -25,11 +22,11 @@ export class UsuarioService {
   }
 
   obtenerUsuarios(){
-    console.log("Si llego a obtener")
-    this.http.get(this.myAppUrl + this.myAppUrl).toPromise()
+    this.http.get(this.myAppUrl + this.myApiUrl).toPromise()
                   .then(data => {
                     this.list = data as Usuario[]
-                  })
+                  });
+
 
   }
 
