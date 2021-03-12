@@ -1,0 +1,65 @@
+<!--Iconos obtenidos del siguiente link
+  https://fontawesome.com/icons
+-->
+
+<form [formGroup]="form" (ngSubmit)="guardarUsuario()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white" >
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre" maxlength="50">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Apellido Paterno</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white" >
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+      <input type="text" class="form-control"  formControlName="ApellidoPaterno" placeholder="Apellido Parterno"  maxlength="50">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Apellido Materno</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white" >
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+      <input type="text" class="form-control" formControlName="ApellidoMaterno" placeholder="Apellido Materno"  maxlength="50">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">RFC</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white" >
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+      <input type="text" class="form-control" formControlName="RFC" placeholder="RFC"  maxlength="13">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Fecha de nacimiento</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white" >
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+      </div>
+      <input type="date" class="form-control" placeholder="Fecha nacimiento">
+    </div>
+  </div>
+  <div class="form-group text-center">
+    <br>
+    <button style="width: 100%;" class="btn btn-success btn-lg btn-block" [disabled]="form.invalid" type="submit"> <i class="fas fa-database"></i >Aceptar</button>
+  </div>
+</form>
