@@ -72,7 +72,7 @@ export class UsuarioComponent implements OnInit, OnDestroy {
     this.usuarioService.guardarUsuario(usuario).subscribe(data => {
       this.toastr.success("Registro Agregado", "El usuario fue registrado");
       this.form.reset();
-      //this.usuarioService.obtenerUsuarios();
+      this.usuarioService.obtenerUsuarios();
     })
 
   }
