@@ -8,8 +8,8 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  myAppUrl = 'http://localhost:4200/';
-  myApiUrl = 'api/usuario/'
+  myAppUrl = 'https://localhost:44365/';
+  myApiUrl = 'api/Usuarios/'
   list: Usuario[] = [
     {Nombre:"Javier", ApellidoPaterno:"Robles", ApellidoMaterno:"Perez", RFC:"ROPF900217"},
     {Nombre:"Jonathan", ApellidoPaterno:"Rodriguez", ApellidoMaterno:"Perez", RFC:"ROPF901234"}
@@ -20,16 +20,17 @@ export class UsuarioService {
   constructor(private http:HttpClient) { }
 
   guardarUsuario(usuario:Usuario):Observable<Usuario>{
+    console.log("Si llego al servicio")
     return this.http.post<Usuario>(this.myAppUrl+this.myApiUrl, usuario);
   }
 
   obtenerUsuarios(){
-    /*
+    console.log("Si llego a obtener")
     this.http.get(this.myAppUrl + this.myAppUrl).toPromise()
                   .then(data => {
                     this.list = data as Usuario[]
                   })
-                  */
+
   }
 
   eliminarUsuario(id:number):Observable<Usuario>{

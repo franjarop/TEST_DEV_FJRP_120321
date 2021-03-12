@@ -64,19 +64,17 @@ export class UsuarioComponent implements OnInit, OnDestroy {
 
   agregar(){
     const usuario: Usuario = {
-      Nombre: this.form.get('Nombre')?.value,
+      Nombre: this.form.get('nombre')?.value,
       ApellidoPaterno: this.form.get('ApellidoPaterno')?.value,
       ApellidoMaterno: this.form.get('ApellidoMaterno')?.value,
       RFC: this.form.get('RFC')?.value
     }
-    this.toastr.success("Registro Agregado", "El usuario fue registrado");
-      this.form.reset();
-      /*
     this.usuarioService.guardarUsuario(usuario).subscribe(data => {
-      console.log("Guardado");
+      this.toastr.success("Registro Agregado", "El usuario fue registrado");
       this.form.reset();
+      //this.usuarioService.obtenerUsuarios();
     })
-    */
+
   }
 
   editar(){
