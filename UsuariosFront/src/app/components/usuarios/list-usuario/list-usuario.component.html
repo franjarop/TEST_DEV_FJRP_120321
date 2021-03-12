@@ -1,13 +1,23 @@
 <br>
 <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido paterno</th>
+      <th scope="col">Apellido Materno</th>
+      <th scope="col">RFC</th>
+      <th scope="col">Fecha Nacimiento</th>
+    </tr>
+  </thead>
   <tbody>
     <tr *ngFor = "let usuario of usuarioServicio.list">
-      <td>{{usuario.id}}</td>
-      <td>{{usuario.Nombre}}</td>
-      <td>{{usuario.ApellidoPaterno}}</td>
-      <td>{{usuario.ApellidoMaterno}}</td>
-      <td>{{usuario.RFC}}</td>
-      <td>{{usuario.FechaNacimiento}}</td>
+      <td>{{usuario.idPersonaFisica}}</td>
+      <td>{{usuario.nombre}}</td>
+      <td>{{usuario.apellidoPaterno}}</td>
+      <td>{{usuario.apellidoMaterno}}</td>
+      <td>{{usuario.rfc}}</td>
+      <td>{{usuario.fechaNacimiento}}</td>
       <td>
         <i class="far fa-edit fa-lg text-info" (click)="editar(usuario)" style="cursor: pointer;"></i>
       </td>
